@@ -8,12 +8,12 @@ import Foundation
 
 class Stone: NSObject {
     
-    /*var location: Location
+    var location: Location
     var type:StoneType
     
     init(type:StoneType,loc:Location) {
         self.location = loc
         self.type = type
-    }*/
+    }
 
 }

@@ -3,21 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A96C71A81C2FF1D60024C263 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71A71C2FF1D60024C263 /* GameViewController.swift */; };
+		A96C71AA1C2FF4A80024C263 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71A91C2FF4A80024C263 /* GameInfo.swift */; };
+		A96C71AC1C3001B50024C263 /* GobanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71AB1C3001B50024C263 /* GobanView.swift */; };
+		A96C71B11C3005040024C263 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AE1C3005040024C263 /* Black.png */; };
+		A96C71B21C3005040024C263 /* board_back.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AF1C3005040024C263 /* board_back.png */; };
+		A96C71B31C3005040024C263 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71B01C3005040024C263 /* White.png */; };
 		A9F2779C1C2FEA9900B19300 /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F277991C2FEA9900B19300 /* Stone.swift */; };
 		A9F2779D1C2FEA9900B19300 /* StoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779A1C2FEA9900B19300 /* StoneType.swift */; };
 		A9F2779E1C2FEA9900B19300 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779B1C2FEA9900B19300 /* Location.swift */; };
 		A9F8B6CE1C2FE05400540306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */; };
-		A9F8B6D01C2FE05400540306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CF1C2FE05400540306 /* ViewController.swift */; };
+		A9F8B6D01C2FE05400540306 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CF1C2FE05400540306 /* HomeViewController.swift */; };
 		A9F8B6D31C2FE05400540306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D11C2FE05400540306 /* Main.storyboard */; };
 		A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D41C2FE05400540306 /* Assets.xcassets */; };
 		A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */; };
 		A9F8B6E31C2FE05400540306 /* GoTaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */; };
 		A9F8B6EE1C2FE05400540306 /* GoTaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */; };
-		A9F8B6FF1C2FE54900540306 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6FE1C2FE54900540306 /* Resources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A96C71A71C2FF1D60024C263 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
+		A96C71A91C2FF4A80024C263 /* GameInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
+		A96C71AB1C3001B50024C263 /* GobanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GobanView.swift; path = Game/GobanView.swift; sourceTree = "<group>"; };
+		A96C71AE1C3005040024C263 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
+		A96C71AF1C3005040024C263 /* board_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_back.png; sourceTree = "<group>"; };
+		A96C71B01C3005040024C263 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		A9F277991C2FEA9900B19300 /* Stone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stone.swift; path = Models/Stone.swift; sourceTree = "<group>"; };
 		A9F2779A1C2FEA9900B19300 /* StoneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoneType.swift; path = Models/StoneType.swift; sourceTree = "<group>"; };
 		A9F2779B1C2FEA9900B19300 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		A9F8B6CA1C2FE05400540306 /* GoTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9F8B6CF1C2FE05400540306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9F8B6CF1C2FE05400540306 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A9F8B6D21C2FE05400540306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9F8B6D41C2FE05400540306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F8B6D71C2FE05400540306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +65,6 @@
 		A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoTaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoTaoUITests.swift; sourceTree = "<group>"; };
 		A9F8B6EF1C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9F8B6FE1C2FE54900540306 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A96C71AD1C3005040024C263 /* statics */ = {
+			isa = PBXGroup;
+			children = (
+				A96C71AE1C3005040024C263 /* Black.png */,
+				A96C71AF1C3005040024C263 /* board_back.png */,
+				A96C71B01C3005040024C263 /* White.png */,
+			);
+			path = statics;
+			sourceTree = "<group>";
+		};
 		A9F8B6C11C2FE05400540306 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +125,11 @@
 		A9F8B6CC1C2FE05400540306 /* GoTao */ = {
 			isa = PBXGroup;
 			children = (
-				A9F8B6FE1C2FE54900540306 /* Resources */,
+				A96C71AD1C3005040024C263 /* statics */,
 				A9F8B6FD1C2FE4C600540306 /* Models */,
 				A9F8B6FC1C2FE4BD00540306 /* Game */,
 				A9F8B6FB1C2FE4B500540306 /* Home */,
 				A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */,
-				A9F8B6CF1C2FE05400540306 /* ViewController.swift */,
 				A9F8B6D11C2FE05400540306 /* Main.storyboard */,
 				A9F8B6D41C2FE05400540306 /* Assets.xcassets */,
 				A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */,
@@ -140,6 +159,7 @@
 		A9F8B6FB1C2FE4B500540306 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A9F8B6CF1C2FE05400540306 /* HomeViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -147,6 +167,8 @@
 		A9F8B6FC1C2FE4BD00540306 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				A96C71A71C2FF1D60024C263 /* GameViewController.swift */,
+				A96C71AB1C3001B50024C263 /* GobanView.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -157,6 +179,7 @@
 				A9F277991C2FEA9900B19300 /* Stone.swift */,
 				A9F2779A1C2FEA9900B19300 /* StoneType.swift */,
 				A9F2779B1C2FEA9900B19300 /* Location.swift */,
+				A96C71A91C2FF4A80024C263 /* GameInfo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,7 +264,7 @@
 				};
 			};
 			buildConfigurationList = A9F8B6C51C2FE05400540306 /* Build configuration list for PBXProject "GoTao" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -265,8 +288,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F8B6FF1C2FE54900540306 /* Resources in Resources */,
 				A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */,
+				A96C71B21C3005040024C263 /* board_back.png in Resources */,
+				A96C71B11C3005040024C263 /* Black.png in Resources */,
+				A96C71B31C3005040024C263 /* White.png in Resources */,
 				A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */,
 				A9F8B6D31C2FE05400540306 /* Main.storyboard in Resources */,
 			);
@@ -293,10 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96C71AA1C2FF4A80024C263 /* GameInfo.swift in Sources */,
 				A9F2779C1C2FEA9900B19300 /* Stone.swift in Sources */,
 				A9F2779D1C2FEA9900B19300 /* StoneType.swift in Sources */,
 				A9F2779E1C2FEA9900B19300 /* Location.swift in Sources */,
-				A9F8B6D01C2FE05400540306 /* ViewController.swift in Sources */,
+				A96C71AC1C3001B50024C263 /* GobanView.swift in Sources */,
+				A9F8B6D01C2FE05400540306 /* HomeViewController.swift in Sources */,
+				A96C71A81C2FF1D60024C263 /* GameViewController.swift in Sources */,
 				A9F8B6CE1C2FE05400540306 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +468,7 @@
 				INFOPLIST_FILE = GoTao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTao;
+				PRODUCT_BUNDLE_IDENTIFIER = GoTao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -452,7 +480,7 @@
 				INFOPLIST_FILE = GoTao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTao;
+				PRODUCT_BUNDLE_IDENTIFIER = GoTao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -7,8 +7,8 @@
 import Foundation
 
 class Location: NSObject {
-    var x:Int = 0
-    var y:Int = 0
+    var x:Int
+    var y:Int
     
     init(x:Int,y:Int) {
         

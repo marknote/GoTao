@@ -1,0 +1,11 @@
+/**
+ *
+ * Copyright (c) 2015, MarkNote. (MIT Licensed)
+ * https://github.com/marknote/MarknoteParser
+ */
+
+import UIKit
+
+ class GameViewController: UIViewController {
+
+}
