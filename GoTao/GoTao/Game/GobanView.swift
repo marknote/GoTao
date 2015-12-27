@@ -53,6 +53,5 @@ class GobanView: UIView {
             }
         }
     }
-    
 
 }
