@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9F8B6CE1C2FE05400540306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */; };
+		A9F8B6D01C2FE05400540306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CF1C2FE05400540306 /* ViewController.swift */; };
+		A9F8B6D31C2FE05400540306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D11C2FE05400540306 /* Main.storyboard */; };
+		A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D41C2FE05400540306 /* Assets.xcassets */; };
+		A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */; };
+		A9F8B6E31C2FE05400540306 /* GoTaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */; };
+		A9F8B6EE1C2FE05400540306 /* GoTaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9F8B6DF1C2FE05400540306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9F8B6C21C2FE05400540306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9F8B6C91C2FE05400540306;
+			remoteInfo = GoTao;
+		};
+		A9F8B6EA1C2FE05400540306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9F8B6C21C2FE05400540306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9F8B6C91C2FE05400540306;
+			remoteInfo = GoTao;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9F8B6CA1C2FE05400540306 /* GoTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9F8B6CF1C2FE05400540306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9F8B6D21C2FE05400540306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9F8B6D41C2FE05400540306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9F8B6D71C2FE05400540306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9F8B6D91C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoTaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoTaoTests.swift; sourceTree = "<group>"; };
+		A9F8B6E41C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoTaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoTaoUITests.swift; sourceTree = "<group>"; };
+		A9F8B6EF1C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9F8B6C71C2FE05400540306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6DB1C2FE05400540306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6E61C2FE05400540306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9F8B6C11C2FE05400540306 = {
+			isa = PBXGroup;
+			children = (
+				A9F8B6CC1C2FE05400540306 /* GoTao */,
+				A9F8B6E11C2FE05400540306 /* GoTaoTests */,
+				A9F8B6EC1C2FE05400540306 /* GoTaoUITests */,
+				A9F8B6CB1C2FE05400540306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9F8B6CB1C2FE05400540306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9F8B6CA1C2FE05400540306 /* GoTao.app */,
+				A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */,
+				A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F8B6CC1C2FE05400540306 /* GoTao */ = {
+			isa = PBXGroup;
+			children = (
+				A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */,
+				A9F8B6CF1C2FE05400540306 /* ViewController.swift */,
+				A9F8B6D11C2FE05400540306 /* Main.storyboard */,
+				A9F8B6D41C2FE05400540306 /* Assets.xcassets */,
+				A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */,
+				A9F8B6D91C2FE05400540306 /* Info.plist */,
+			);
+			path = GoTao;
+			sourceTree = "<group>";
+		};
+		A9F8B6E11C2FE05400540306 /* GoTaoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */,
+				A9F8B6E41C2FE05400540306 /* Info.plist */,
+			);
+			path = GoTaoTests;
+			sourceTree = "<group>";
+		};
+		A9F8B6EC1C2FE05400540306 /* GoTaoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */,
+				A9F8B6EF1C2FE05400540306 /* Info.plist */,
+			);
+			path = GoTaoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9F8B6C91C2FE05400540306 /* GoTao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9F8B6F21C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTao" */;
+			buildPhases = (
+				A9F8B6C61C2FE05400540306 /* Sources */,
+				A9F8B6C71C2FE05400540306 /* Frameworks */,
+				A9F8B6C81C2FE05400540306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoTao;
+			productName = GoTao;
+			productReference = A9F8B6CA1C2FE05400540306 /* GoTao.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9F8B6DD1C2FE05400540306 /* GoTaoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9F8B6F51C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoTests" */;
+			buildPhases = (
+				A9F8B6DA1C2FE05400540306 /* Sources */,
+				A9F8B6DB1C2FE05400540306 /* Frameworks */,
+				A9F8B6DC1C2FE05400540306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9F8B6E01C2FE05400540306 /* PBXTargetDependency */,
+			);
+			name = GoTaoTests;
+			productName = GoTaoTests;
+			productReference = A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9F8B6E81C2FE05400540306 /* GoTaoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9F8B6F81C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoUITests" */;
+			buildPhases = (
+				A9F8B6E51C2FE05400540306 /* Sources */,
+				A9F8B6E61C2FE05400540306 /* Frameworks */,
+				A9F8B6E71C2FE05400540306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9F8B6EB1C2FE05400540306 /* PBXTargetDependency */,
+			);
+			name = GoTaoUITests;
+			productName = GoTaoUITests;
+			productReference = A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9F8B6C21C2FE05400540306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = markNote;
+				TargetAttributes = {
+					A9F8B6C91C2FE05400540306 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					A9F8B6DD1C2FE05400540306 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A9F8B6C91C2FE05400540306;
+					};
+					A9F8B6E81C2FE05400540306 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A9F8B6C91C2FE05400540306;
+					};
+				};
+			};
+			buildConfigurationList = A9F8B6C51C2FE05400540306 /* Build configuration list for PBXProject "GoTao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9F8B6C11C2FE05400540306;
+			productRefGroup = A9F8B6CB1C2FE05400540306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9F8B6C91C2FE05400540306 /* GoTao */,
+				A9F8B6DD1C2FE05400540306 /* GoTaoTests */,
+				A9F8B6E81C2FE05400540306 /* GoTaoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9F8B6C81C2FE05400540306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */,
+				A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */,
+				A9F8B6D31C2FE05400540306 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6DC1C2FE05400540306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6E71C2FE05400540306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9F8B6C61C2FE05400540306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F8B6D01C2FE05400540306 /* ViewController.swift in Sources */,
+				A9F8B6CE1C2FE05400540306 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6DA1C2FE05400540306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F8B6E31C2FE05400540306 /* GoTaoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B6E51C2FE05400540306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F8B6EE1C2FE05400540306 /* GoTaoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9F8B6E01C2FE05400540306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9F8B6C91C2FE05400540306 /* GoTao */;
+			targetProxy = A9F8B6DF1C2FE05400540306 /* PBXContainerItemProxy */;
+		};
+		A9F8B6EB1C2FE05400540306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9F8B6C91C2FE05400540306 /* GoTao */;
+			targetProxy = A9F8B6EA1C2FE05400540306 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9F8B6D11C2FE05400540306 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9F8B6D21C2FE05400540306 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9F8B6D71C2FE05400540306 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9F8B6F01C2FE05400540306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A9F8B6F11C2FE05400540306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9F8B6F31C2FE05400540306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoTao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9F8B6F41C2FE05400540306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoTao/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTao;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A9F8B6F61C2FE05400540306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoTaoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoTao.app/GoTao";
+			};
+			name = Debug;
+		};
+		A9F8B6F71C2FE05400540306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoTaoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoTao.app/GoTao";
+			};
+			name = Release;
+		};
+		A9F8B6F91C2FE05400540306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoTaoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoTao;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A9F8B6FA1C2FE05400540306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoTaoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoTao;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9F8B6C51C2FE05400540306 /* Build configuration list for PBXProject "GoTao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F8B6F01C2FE05400540306 /* Debug */,
+				A9F8B6F11C2FE05400540306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9F8B6F21C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F8B6F31C2FE05400540306 /* Debug */,
+				A9F8B6F41C2FE05400540306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9F8B6F51C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F8B6F61C2FE05400540306 /* Debug */,
+				A9F8B6F71C2FE05400540306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9F8B6F81C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F8B6F91C2FE05400540306 /* Debug */,
+				A9F8B6FA1C2FE05400540306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9F8B6C21C2FE05400540306 /* Project object */;
+}
