@@ -1,10 +1,8 @@
-//
-//  ViewController.swift
-//  GoTao
-//
-//  Created by bill on 27/12/15.
-//  Copyright © 2015 markNote. All rights reserved.
-//
+/**
+ *
+ * Copyright (c) 2015, MarkNote. (MIT Licensed)
+ * https://github.com/marknote/MarknoteParser
+ */
 
 import UIKit
 
