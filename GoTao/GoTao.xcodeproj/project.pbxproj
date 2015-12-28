@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9298FAA1C31730F00094259 /* SGFParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9298FA91C31730F00094259 /* SGFParser.swift */; };
+		A9298FAD1C31810800094259 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9298FAC1C31810800094259 /* StringExtension.swift */; };
 		A96C71A81C2FF1D60024C263 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71A71C2FF1D60024C263 /* GameViewController.swift */; };
 		A96C71AA1C2FF4A80024C263 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71A91C2FF4A80024C263 /* GameInfo.swift */; };
 		A96C71AC1C3001B50024C263 /* GobanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C71AB1C3001B50024C263 /* GobanView.swift */; };
 		A96C71B11C3005040024C263 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AE1C3005040024C263 /* Black.png */; };
 		A96C71B21C3005040024C263 /* board_back.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AF1C3005040024C263 /* board_back.png */; };
 		A96C71B31C3005040024C263 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71B01C3005040024C263 /* White.png */; };
-		A9F2779C1C2FEA9900B19300 /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F277991C2FEA9900B19300 /* Stone.swift */; };
+		A9F2779C1C2FEA9900B19300 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F277991C2FEA9900B19300 /* Move.swift */; };
 		A9F2779D1C2FEA9900B19300 /* StoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779A1C2FEA9900B19300 /* StoneType.swift */; };
 		A9F2779E1C2FEA9900B19300 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779B1C2FEA9900B19300 /* Location.swift */; };
 		A9F8B6CE1C2FE05400540306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6CD1C2FE05400540306 /* AppDelegate.swift */; };
@@ -43,13 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9298FA91C31730F00094259 /* SGFParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SGFParser.swift; path = Models/SGFParser.swift; sourceTree = "<group>"; };
+		A9298FAC1C31810800094259 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A96C71A71C2FF1D60024C263 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
 		A96C71A91C2FF4A80024C263 /* GameInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		A96C71AB1C3001B50024C263 /* GobanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GobanView.swift; path = Game/GobanView.swift; sourceTree = "<group>"; };
 		A96C71AE1C3005040024C263 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
 		A96C71AF1C3005040024C263 /* board_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_back.png; sourceTree = "<group>"; };
 		A96C71B01C3005040024C263 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
-		A9F277991C2FEA9900B19300 /* Stone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stone.swift; path = Models/Stone.swift; sourceTree = "<group>"; };
+		A9F277991C2FEA9900B19300 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Move.swift; path = Models/Move.swift; sourceTree = "<group>"; };
 		A9F2779A1C2FEA9900B19300 /* StoneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoneType.swift; path = Models/StoneType.swift; sourceTree = "<group>"; };
 		A9F2779B1C2FEA9900B19300 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		A9F8B6CA1C2FE05400540306 /* GoTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9298FAB1C3180F600094259 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A9298FAC1C31810800094259 /* StringExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		A96C71AD1C3005040024C263 /* statics */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 		A9F8B6CC1C2FE05400540306 /* GoTao */ = {
 			isa = PBXGroup;
 			children = (
+				A9298FAB1C3180F600094259 /* Extension */,
 				A96C71AD1C3005040024C263 /* statics */,
 				A9F8B6FD1C2FE4C600540306 /* Models */,
 				A9F8B6FC1C2FE4BD00540306 /* Game */,
@@ -176,10 +189,11 @@
 		A9F8B6FD1C2FE4C600540306 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A9F277991C2FEA9900B19300 /* Stone.swift */,
+				A9F277991C2FEA9900B19300 /* Move.swift */,
 				A9F2779A1C2FEA9900B19300 /* StoneType.swift */,
 				A9F2779B1C2FEA9900B19300 /* Location.swift */,
 				A96C71A91C2FF4A80024C263 /* GameInfo.swift */,
+				A9298FA91C31730F00094259 /* SGFParser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -319,8 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96C71AA1C2FF4A80024C263 /* GameInfo.swift in Sources */,
-				A9F2779C1C2FEA9900B19300 /* Stone.swift in Sources */,
+				A9F2779C1C2FEA9900B19300 /* Move.swift in Sources */,
+				A9298FAD1C31810800094259 /* StringExtension.swift in Sources */,
 				A9F2779D1C2FEA9900B19300 /* StoneType.swift in Sources */,
+				A9298FAA1C31730F00094259 /* SGFParser.swift in Sources */,
 				A9F2779E1C2FEA9900B19300 /* Location.swift in Sources */,
 				A96C71AC1C3001B50024C263 /* GobanView.swift in Sources */,
 				A9F8B6D01C2FE05400540306 /* HomeViewController.swift in Sources */,

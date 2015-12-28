@@ -7,13 +7,10 @@
 import Foundation
 
 class Location: NSObject {
-    var x:Int
-    var y:Int
-    
-    init(x:Int,y:Int) {
-        
+    var x:UInt32
+    var y:UInt32
+    init(x:UInt32,y:UInt32) {
             self.x = x
             self.y = y
-        
     }
 }

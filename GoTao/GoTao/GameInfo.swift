@@ -10,4 +10,5 @@ class GameInfo: NSObject {
     
     var title: String = ""
     var metaInfo: String = ""
+    var allMoves: [Move] = [Move]()
 }
