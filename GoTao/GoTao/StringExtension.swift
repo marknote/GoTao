@@ -15,6 +15,20 @@ extension String {
         guard characters.count > 0 && Int(pos) < characters.count else  { return 0 }
         return Array(characters)[Int(pos)].unicodeScalarsValue
     }
+    
+    func findValueWithTags(beginTag:String,endTag:String)->String?{
+        if let beginLocation = self.rangeOfString(beginTag) {
+            let startIndex = beginLocation.startIndex
+            let rest = self.substringFromIndex(startIndex.advancedBy(beginTag.characters.count))
+            if let endRang = rest.rangeOfString(endTag){
+                
+                return rest.substringToIndex(endRang.startIndex)
+            }
+        }
+        return nil
+
+    }
+    
 }
 extension Character {
     var unicodeScalarsValue: UInt32 {

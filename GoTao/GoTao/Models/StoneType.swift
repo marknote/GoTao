@@ -8,5 +8,5 @@ import Foundation
 
 enum StoneType: Character {
     case Black = "B"
-    case Withe = "W"
+    case White = "W"
 }

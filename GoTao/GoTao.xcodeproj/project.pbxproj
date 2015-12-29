@@ -24,18 +24,10 @@
 		A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D41C2FE05400540306 /* Assets.xcassets */; };
 		A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F8B6D61C2FE05400540306 /* LaunchScreen.storyboard */; };
 		A9F8B6E31C2FE05400540306 /* GoTaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */; };
-		A9F8B6EE1C2FE05400540306 /* GoTaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A9F8B6DF1C2FE05400540306 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A9F8B6C21C2FE05400540306 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9F8B6C91C2FE05400540306;
-			remoteInfo = GoTao;
-		};
-		A9F8B6EA1C2FE05400540306 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9F8B6C21C2FE05400540306 /* Project object */;
 			proxyType = 1;
@@ -66,7 +58,6 @@
 		A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoTaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F8B6E21C2FE05400540306 /* GoTaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoTaoTests.swift; sourceTree = "<group>"; };
 		A9F8B6E41C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoTaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F8B6ED1C2FE05400540306 /* GoTaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoTaoUITests.swift; sourceTree = "<group>"; };
 		A9F8B6EF1C2FE05400540306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,13 +71,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9F8B6DB1C2FE05400540306 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9F8B6E61C2FE05400540306 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,7 +113,6 @@
 			children = (
 				A9F8B6CA1C2FE05400540306 /* GoTao.app */,
 				A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */,
-				A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,8 +175,8 @@
 				A9F277991C2FEA9900B19300 /* Move.swift */,
 				A9F2779A1C2FEA9900B19300 /* StoneType.swift */,
 				A9F2779B1C2FEA9900B19300 /* Location.swift */,
-				A96C71A91C2FF4A80024C263 /* GameInfo.swift */,
 				A9298FA91C31730F00094259 /* SGFParser.swift */,
+				A96C71A91C2FF4A80024C263 /* GameInfo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -236,24 +219,6 @@
 			productReference = A9F8B6DE1C2FE05400540306 /* GoTaoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A9F8B6E81C2FE05400540306 /* GoTaoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A9F8B6F81C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoUITests" */;
-			buildPhases = (
-				A9F8B6E51C2FE05400540306 /* Sources */,
-				A9F8B6E61C2FE05400540306 /* Frameworks */,
-				A9F8B6E71C2FE05400540306 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A9F8B6EB1C2FE05400540306 /* PBXTargetDependency */,
-			);
-			name = GoTaoUITests;
-			productName = GoTaoUITests;
-			productReference = A9F8B6E91C2FE05400540306 /* GoTaoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,10 +233,6 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					A9F8B6DD1C2FE05400540306 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = A9F8B6C91C2FE05400540306;
-					};
-					A9F8B6E81C2FE05400540306 = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = A9F8B6C91C2FE05400540306;
 					};
@@ -292,7 +253,6 @@
 			targets = (
 				A9F8B6C91C2FE05400540306 /* GoTao */,
 				A9F8B6DD1C2FE05400540306 /* GoTaoTests */,
-				A9F8B6E81C2FE05400540306 /* GoTaoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,13 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9F8B6DC1C2FE05400540306 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9F8B6E71C2FE05400540306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,14 +306,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9F8B6E51C2FE05400540306 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9F8B6EE1C2FE05400540306 /* GoTaoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -368,11 +313,6 @@
 			isa = PBXTargetDependency;
 			target = A9F8B6C91C2FE05400540306 /* GoTao */;
 			targetProxy = A9F8B6DF1C2FE05400540306 /* PBXContainerItemProxy */;
-		};
-		A9F8B6EB1C2FE05400540306 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A9F8B6C91C2FE05400540306 /* GoTao */;
-			targetProxy = A9F8B6EA1C2FE05400540306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,30 +465,6 @@
 			};
 			name = Release;
 		};
-		A9F8B6F91C2FE05400540306 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GoTaoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GoTao;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		A9F8B6FA1C2FE05400540306 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GoTaoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = markNote.GoTaoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GoTao;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,15 +491,6 @@
 			buildConfigurations = (
 				A9F8B6F61C2FE05400540306 /* Debug */,
 				A9F8B6F71C2FE05400540306 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A9F8B6F81C2FE05400540306 /* Build configuration list for PBXNativeTarget "GoTaoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9F8B6F91C2FE05400540306 /* Debug */,
-				A9F8B6FA1C2FE05400540306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
