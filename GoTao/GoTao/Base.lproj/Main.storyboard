@@ -104,9 +104,17 @@
                                     <constraint firstAttribute="height" constant="44" id="xwi-8Q-ctP"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="&lt;" id="AEM-ng-1xf"/>
+                                    <barButtonItem title="&lt;" id="AEM-ng-1xf">
+                                        <connections>
+                                            <action selector="backClick:" destination="AQf-Jc-L1G" id="jj5-kr-q2i"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ww6-GO-SF4"/>
-                                    <barButtonItem title="&gt;" id="ACe-EI-K1h"/>
+                                    <barButtonItem title="&gt;" id="ACe-EI-K1h">
+                                        <connections>
+                                            <action selector="forwardClick:" destination="AQf-Jc-L1G" id="t9T-XZ-4uu"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABB-RN-gUZ" customClass="GobanView" customModule="GoTao" customModuleProvider="target">
