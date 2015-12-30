@@ -15,6 +15,7 @@
 		A96C71B11C3005040024C263 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AE1C3005040024C263 /* Black.png */; };
 		A96C71B21C3005040024C263 /* board_back.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71AF1C3005040024C263 /* board_back.png */; };
 		A96C71B31C3005040024C263 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = A96C71B01C3005040024C263 /* White.png */; };
+		A9AA0C751C34110E00C76284 /* 001.sgf in Resources */ = {isa = PBXBuildFile; fileRef = A9AA0C741C34110E00C76284 /* 001.sgf */; };
 		A9F2779C1C2FEA9900B19300 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F277991C2FEA9900B19300 /* Move.swift */; };
 		A9F2779D1C2FEA9900B19300 /* StoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779A1C2FEA9900B19300 /* StoneType.swift */; };
 		A9F2779E1C2FEA9900B19300 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F2779B1C2FEA9900B19300 /* Location.swift */; };
@@ -45,6 +46,7 @@
 		A96C71AE1C3005040024C263 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
 		A96C71AF1C3005040024C263 /* board_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board_back.png; sourceTree = "<group>"; };
 		A96C71B01C3005040024C263 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
+		A9AA0C741C34110E00C76284 /* 001.sgf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.sgf; sourceTree = "<group>"; };
 		A9F277991C2FEA9900B19300 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Move.swift; path = Models/Move.swift; sourceTree = "<group>"; };
 		A9F2779A1C2FEA9900B19300 /* StoneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoneType.swift; path = Models/StoneType.swift; sourceTree = "<group>"; };
 		A9F2779B1C2FEA9900B19300 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				A96C71AE1C3005040024C263 /* Black.png */,
 				A96C71AF1C3005040024C263 /* board_back.png */,
 				A96C71B01C3005040024C263 /* White.png */,
+				A9AA0C741C34110E00C76284 /* 001.sgf */,
 			);
 			path = statics;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				A9F8B6D81C2FE05400540306 /* LaunchScreen.storyboard in Resources */,
 				A96C71B21C3005040024C263 /* board_back.png in Resources */,
+				A9AA0C751C34110E00C76284 /* 001.sgf in Resources */,
 				A96C71B11C3005040024C263 /* Black.png in Resources */,
 				A96C71B31C3005040024C263 /* White.png in Resources */,
 				A9F8B6D51C2FE05400540306 /* Assets.xcassets in Resources */,

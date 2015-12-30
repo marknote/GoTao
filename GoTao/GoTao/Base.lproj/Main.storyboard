@@ -98,21 +98,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABB-RN-gUZ" customClass="GobanView" customModule="GoTao" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="124" width="600" height="600"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbO-CZ-1Tb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xwi-8Q-ctP"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="&lt;" id="AEM-ng-1xf"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ww6-GO-SF4"/>
+                                    <barButtonItem title="&gt;" id="ACe-EI-K1h"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABB-RN-gUZ" customClass="GobanView" customModule="GoTao" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="600" height="341"/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.69411764710000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ABB-RN-gUZ" secondAttribute="height" multiplier="1:1" id="71B-qR-REp"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpo-Mm-sMk">
+                                <rect key="frame" x="52" y="78" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HA5-VG-ckH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fVf-RT-y1r" firstAttribute="top" secondItem="jbO-CZ-1Tb" secondAttribute="bottom" id="4yV-uq-Jpk"/>
+                            <constraint firstItem="jbO-CZ-1Tb" firstAttribute="leading" secondItem="1zr-bM-L9R" secondAttribute="leading" id="9QY-Zr-nc1"/>
                             <constraint firstAttribute="trailing" secondItem="ABB-RN-gUZ" secondAttribute="trailing" id="HSe-Gh-osD"/>
+                            <constraint firstItem="mpo-Mm-sMk" firstAttribute="leading" secondItem="1zr-bM-L9R" secondAttribute="leading" id="Sij-jG-d7w"/>
+                            <constraint firstAttribute="trailing" secondItem="jbO-CZ-1Tb" secondAttribute="trailing" id="fW6-QZ-5Il"/>
+                            <constraint firstAttribute="trailing" secondItem="mpo-Mm-sMk" secondAttribute="trailing" id="fXU-sp-DT8"/>
                             <constraint firstItem="ABB-RN-gUZ" firstAttribute="top" secondItem="qNS-Wj-NOp" secondAttribute="bottom" constant="60" id="fzL-v0-z9a"/>
                             <constraint firstItem="ABB-RN-gUZ" firstAttribute="leading" secondItem="1zr-bM-L9R" secondAttribute="leading" id="kZ6-1a-3JH"/>
+                            <constraint firstItem="mpo-Mm-sMk" firstAttribute="top" secondItem="qNS-Wj-NOp" secondAttribute="bottom" id="ouP-Ht-H9h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_goban" destination="ABB-RN-gUZ" id="0eI-V2-0aj"/>
+                        <outlet property="_lblTitle" destination="mpo-Mm-sMk" id="ozF-WF-HKA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOx-hW-fel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
