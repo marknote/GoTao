@@ -69,6 +69,17 @@ class GobanView: UIView {
         let imgWhite = UIImage(named: "White.png")
        
         let  count = moves?.count
+        
+        let font = UIFont(name: "Helvetica Bold", size: 14.0)
+    
+         let textColor = UIColor(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)
+
+        
+        let textFontAttributes = [
+            NSFontAttributeName : font!,
+            NSForegroundColorAttributeName: textColor
+        ]
+
         for (var i = 0; i < count; i++ )
         {
             let move = moves![i]
@@ -81,6 +92,26 @@ class GobanView: UIView {
                 CGContextDrawImage(ctx, imageRect, imgBlack?.CGImage )
                 
             }
+            if move.groupName.characters.count > 0 {
+                //CGContextSetTextMatrix(ctx, CGAffineTransformMakeScale(1.0, -1.0))
+                CGContextSetRGBStrokeColor(ctx, 1, 0, 0, 1)
+                let p = CGPointMake((CGFloat(move.location.x)+0.5)*stoneSize,(CGFloat(move.location.y)+0.5)*stoneSize);
+                (move.groupName as NSString).drawAtPoint(p, withAttributes:textFontAttributes)
+            }
+        }
+        
+        if count > 0
+        {
+            let move = moves![count! - 1]
+            CGContextSetLineWidth(ctx, 1.8)
+            
+            CGContextSetRGBStrokeColor(ctx, 0, 1, 0, 1)
+            
+            CGContextBeginPath(ctx)
+            CGContextAddArc(ctx,
+                CGFloat(move.location.x+1) * stoneSize,
+                CGFloat(move.location.y+1) * stoneSize, 3, 0, CGFloat(2.0*M_PI), 0)
+            CGContextStrokePath(ctx)
         }
     }
 

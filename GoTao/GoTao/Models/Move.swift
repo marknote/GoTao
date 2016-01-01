@@ -10,6 +10,8 @@ class Move: NSObject {
     
     var location: Location
     var type:StoneType
+    var isDead:Bool = false
+    var groupName = ""
     
     init(type:StoneType,loc:Location) {
         self.location = loc
@@ -22,6 +24,15 @@ class Move: NSObject {
         
         self.type = color!
         self.location = Location(x: x,y: y)        
+    }
+    
+    func isConnectedTo(another:Move)->Bool{
+        if (self.type != another.type) {
+            return false
+        }
+        let deltaX = abs(Int(self.location.x) - Int(another.location.x))
+        let deltaY = abs(Int(self.location.y) - Int(another.location.y))
+        return deltaX + deltaY == 1
     }
 
 }

@@ -10,7 +10,7 @@ import UIKit
     @IBOutlet weak var _lblTitle:UILabel!
     @IBOutlet weak var _goban:GobanView!
     
-    var _currentMove = 0
+    //var _currentMove = 0
     
     var _game:GameInfo = GameInfo()
     override func viewDidLoad() {
@@ -33,26 +33,20 @@ import UIKit
     }
     
     @IBAction func backClick(sender:UIBarItem){
-        _currentMove -= 1
-        if (_currentMove < 0){
-            _currentMove = 0
-        }
+        _game.goBack()
         showMoves()
     }
     
     @IBAction func forwardClick(sender:UIBarItem){
-        _currentMove += 1
-        if (_currentMove > _game.allMoves.count - 1){
-            _currentMove = _game.allMoves.count - 1
-        }
+        _game.goForward()
         showMoves()
     }
     func showMoves(){
-        if _game.allMoves.count > 0 {
-            let moves = _game.allMoves[0..<_currentMove]
-            _goban.moves = Array(moves)
+        if _game.allMoves.count > 0 {            
+            _goban.moves = _game.currentMoves()
+            _game.assignGroups()
             _goban.setNeedsDisplay()
-            _lblTitle.text = "\(_game.playerBlack) v \(_game.playerWhite)   \(_currentMove + 1) / \(_game.allMoves.count)"
+            _lblTitle.text = "\(_game.playerBlack) v \(_game.playerWhite)   \(_game.currentMove + 1) / \(_game.allMoves.count)"
         }
     }
 

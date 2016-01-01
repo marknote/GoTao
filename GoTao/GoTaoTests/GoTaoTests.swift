@@ -30,6 +30,25 @@ class GoTaoTests: XCTestCase {
         
     }
     
+    func testIsConnected(){
+        let m1 = Move(step:"B[aa]")
+        let m2 = Move(step:"B[ab]")
+        let m3 = Move(step:"W[ba]")
+        assert(m1.isConnectedTo(m2),"m1 is connected to m2")
+        assert(!m1.isConnectedTo(m3),"m1 is not connected to m3")
+    }
+    
+    func testAssignedGroups(){
+        let kifu = "(;;B[aa];W[ab];B[ca];W[bb];B[ba])"
+        let game = parser.parse(kifu)
+        game.currentMove = 4
+        let groups = game.assignGroups()
+        assert(groups.count == 2)
+        assert(game.allMoves[0].groupName == "B1")
+        assert(game.allMoves[2].groupName == "B1")
+        assert(game.allMoves[1].groupName == "W2")
+    }
+    
     
     
     

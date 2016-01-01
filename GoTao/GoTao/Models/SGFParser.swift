@@ -37,7 +37,7 @@ public class SGFParser {
         }
         
         let moves = nodes
-            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.characters.count==5}
+            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.characters.count >= 4 && $0[$0.startIndex.advancedBy(4)] == "]"}
             .map{Move(step: $0 as String)}
         //print(moves)
         game.allMoves = moves
