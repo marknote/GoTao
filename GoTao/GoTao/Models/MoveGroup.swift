@@ -1,10 +1,8 @@
-//
-//  MoveGroup.swift
-//  GoTao
-//
-//  Created by bill on 1/1/16.
-//  Copyright © 2016 markNote. All rights reserved.
-//
+/**
+ *
+ * Copyright (c) 2015, MarkNote. (MIT Licensed)
+ * https://github.com/marknote/MarknoteParser
+ */
 
 import Foundation
 
