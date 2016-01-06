@@ -47,7 +47,7 @@ class Move: NSObject {
             }            
         }
         for l in occupied {
-            if self.isEqual(l) {
+            if self.location.isEqual(l) {
                continue 
             }
             if self.location.isConnectedTo(l) {

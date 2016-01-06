@@ -20,11 +20,9 @@ class MoveGroup{
     }
     
     func caculateLiberty(occupied:[Location])->Int{
-        var liberty = 0
-        for m in allMoves {
-            liberty += m.caculateLiberty(occupied)
-        }
-        return liberty
+        return allMoves.reduce(0, combine:{$0 + $1.caculateLiberty(occupied)} )
     }
+    
+    
 
 }

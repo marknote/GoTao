@@ -82,6 +82,15 @@ class GoTaoTests: XCTestCase {
         assert(groups[0].caculateLiberty(game.occupiedLocations()) == 6)
     }
     
+    func testLibertyThree(){
+        let kifu = "(;;B[qq];B[qr];W[qp];W[rq];W[rr];W[qs];W[pr];W[pq])"
+        let game = parser.parse(kifu)
+        game.currentMove = 7
+        let groups = game.assignGroups()
+        //assert(groups.count == 2)
+        assert(groups[2].caculateLiberty(game.occupiedLocations()) == 0)
+    }
+    
     
     
     
