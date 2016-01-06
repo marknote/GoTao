@@ -49,6 +49,39 @@ class GoTaoTests: XCTestCase {
         assert(game.allMoves[1].groupName == "W2")
     }
     
+    func testLocationEqual(){
+        let l1 = Location(x:5,y:5)
+        let l2 = Location(x:5,y:5)
+        let l3 = Location(x:5,y:6)
+        assert( l1.isEqual(l2))
+        assert( !l1.isEqual(l3))
+    }
+    
+    func testLocationIsConnectTo(){
+        let l1 = Location(x:5,y:5)
+        let l2 = Location(x:5,y:5)
+        let l3 = Location(x:5,y:6)
+        assert( !l1.isConnectedTo(l2))
+        assert( l1.isConnectedTo(l3))
+    }
+    
+    func testLibertyOne(){
+        let kifu = "(;;B[qq])"
+        let game = parser.parse(kifu)
+        game.currentMove = 0
+        let groups = game.assignGroups()
+        assert(groups.count == 1)
+        assert(groups[0].caculateLiberty(game.occupiedLocations()) == 4)
+    }
+    func testLibertyTwo(){
+        let kifu = "(;;B[qq];B[qr])"
+        let game = parser.parse(kifu)
+        game.currentMove = 1
+        let groups = game.assignGroups()
+        assert(groups.count == 1)
+        assert(groups[0].caculateLiberty(game.occupiedLocations()) == 6)
+    }
+    
     
     
     

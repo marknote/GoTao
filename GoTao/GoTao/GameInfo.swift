@@ -38,6 +38,17 @@ class GameInfo: NSObject {
 
     }
     
+    func occupiedLocations()->[Location]{
+        var occupied = [Location]()
+        let array = currentMoves()
+        for m in array{
+            if !occupied.contains(m.location){
+                occupied.append(m.location)
+            }
+        }
+        return occupied
+    }
+    
     func assignGroups() ->[MoveGroup]{
         let array = currentMoves().sort({ $0.location.distance() < $1.location.distance() })
         let count = array.count
@@ -59,7 +70,11 @@ class GameInfo: NSObject {
             {
                 if previous.groupName.characters.count > 0
                     && move.isConnectedTo(previous){
-                        move.groupName = previous.groupName;
+                        //move.groupName = previous.groupName;
+                        let filtered:[MoveGroup] = groups.filter({$0.name == previous.groupName})
+                        if filtered.count > 0 {
+                            filtered[0].addMove(move)
+                        }
                 }
             }
             
@@ -78,5 +93,7 @@ class GameInfo: NSObject {
         }
         return groups;
     }
+    
+    
 
 }

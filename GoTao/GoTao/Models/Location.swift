@@ -17,4 +17,26 @@ class Location: NSObject {
     func distance() ->UInt32{
         return self.x * self.x  + self.y * self.y
     }
+    
+    override func isEqual(object: AnyObject?) -> Bool {
+        if let obj = object as? Location {
+            return x == obj.x && y == obj.y
+        } else {
+            return false
+        }
+    }
+    
+    func isConnectedTo(another:Location)->Bool{        
+        let deltaX = abs(Int(x) - Int(another.x))
+        if deltaX > 1 {
+            return false
+        }
+        let deltaY = abs(Int(self.y) - Int(another.y))
+        return deltaX + deltaY == 1
+    }
+    
+    override var description:String {
+        return "x:\(x) y:\(y)"
+    }
+    
 }

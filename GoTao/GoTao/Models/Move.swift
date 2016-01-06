@@ -13,6 +13,7 @@ class Move: NSObject {
     var isDead:Bool = false
     var groupName = ""
     
+    
     init(type:StoneType,loc:Location) {
         self.location = loc
         self.type = type
@@ -27,12 +28,38 @@ class Move: NSObject {
     }
     
     func isConnectedTo(another:Move)->Bool{
-        if (self.type != another.type) {
-            return false
-        }
-        let deltaX = abs(Int(self.location.x) - Int(another.location.x))
-        let deltaY = abs(Int(self.location.y) - Int(another.location.y))
-        return deltaX + deltaY == 1
+        return  (self.type == another.type) && self.location.isConnectedTo(another.location)
+        
     }
+    
+    
+    
+    func caculateLiberty(occupied:[Location])->Int{
+        var liberty = 4
+        if (location.x == 0 || location.x == 19 || location.y == 0 || location.y == 19){
+            liberty = 3
+            if (location.x == 0 && location.y == 0
+                || location.x == 19 && location.y == 0
+                || location.x == 0 && location.y == 19
+                || location.x == 19 && location.y == 19
+                ){
+                    liberty = 2
+            }            
+        }
+        for l in occupied {
+            if self.isEqual(l) {
+               continue 
+            }
+            if self.location.isConnectedTo(l) {
+                liberty -= 1
+            }
+        }
+        return liberty
+    }
+    
+    override var description:String {
+        return "\(type) x:\(location.x) y:\(location.y)"
+    }
+
 
 }
