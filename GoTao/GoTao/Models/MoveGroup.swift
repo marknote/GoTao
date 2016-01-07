@@ -19,8 +19,8 @@ class MoveGroup{
         allMoves.append(m)
     }
     
-    func caculateLiberty(occupied:[Location])->Int{
-        return allMoves.reduce(0, combine:{$0 + $1.caculateLiberty(occupied)} )
+    func calculateLiberty(occupied:[Location])->Int{
+        return allMoves.reduce(0, combine:{$0 + $1.calculateLiberty(occupied)} )
     }
     
     

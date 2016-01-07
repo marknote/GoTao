@@ -34,7 +34,7 @@ class Move: NSObject {
     
     
     
-    func caculateLiberty(occupied:[Location])->Int{
+    func calculateLiberty(occupied:[Location])->Int{
         var liberty = 4
         if (location.x == 0 || location.x == 19 || location.y == 0 || location.y == 19){
             liberty = 3

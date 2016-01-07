@@ -71,7 +71,7 @@ class GoTaoTests: XCTestCase {
         game.currentMove = 0
         let groups = game.assignGroups()
         assert(groups.count == 1)
-        assert(groups[0].caculateLiberty(game.occupiedLocations()) == 4)
+        assert(groups[0].calculateLiberty(game.occupiedLocations()) == 4)
     }
     func testLibertyTwo(){
         let kifu = "(;;B[qq];B[qr])"
@@ -79,7 +79,7 @@ class GoTaoTests: XCTestCase {
         game.currentMove = 1
         let groups = game.assignGroups()
         assert(groups.count == 1)
-        assert(groups[0].caculateLiberty(game.occupiedLocations()) == 6)
+        assert(groups[0].calculateLiberty(game.occupiedLocations()) == 6)
     }
     
     func testLibertyThree(){
@@ -88,7 +88,7 @@ class GoTaoTests: XCTestCase {
         game.currentMove = 7
         let groups = game.assignGroups()
         //assert(groups.count == 2)
-        assert(groups[2].caculateLiberty(game.occupiedLocations()) == 0)
+        assert(groups[2].calculateLiberty(game.occupiedLocations()) == 0)
     }
     
     
