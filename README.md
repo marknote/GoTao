@@ -8,6 +8,6 @@ Screenshot:
 - Parse go game records(aka kifu)
 - Render moves on GoBan board
 - Assign groups
-- Caculate liberty and deternmine life and death 
+- Calculate liberty and determine life and death 
 
 
