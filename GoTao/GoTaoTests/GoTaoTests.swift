@@ -31,9 +31,9 @@ class GoTaoTests: XCTestCase {
     }
     
     func testIsConnected(){
-        let m1 = Move(step:"B[aa]")
-        let m2 = Move(step:"B[ab]")
-        let m3 = Move(step:"W[ba]")
+        let m1 = Move(step:"B[aa]",hand:0)
+        let m2 = Move(step:"B[ab]",hand:1)
+        let m3 = Move(step:"W[ba]",hand:2)
         assert(m1.isConnectedTo(m2),"m1 is connected to m2")
         assert(!m1.isConnectedTo(m3),"m1 is not connected to m3")
     }
@@ -42,11 +42,11 @@ class GoTaoTests: XCTestCase {
         let kifu = "(;;B[aa];W[ab];B[ca];W[bb];B[ba])"
         let game = parser.parse(kifu)
         game.currentMove = 4
-        let groups = game.assignGroups()
+        let groups = game.playToHand(4)
         assert(groups.count == 2)
-        assert(game.allMoves[0].groupName == "B1")
-        assert(game.allMoves[2].groupName == "B1")
-        assert(game.allMoves[1].groupName == "W2")
+        assert(game.allMoves[0].groupName == "B0")
+        assert(game.allMoves[2].groupName == "B0")
+        assert(game.allMoves[1].groupName == "W1")
     }
     
     func testLocationEqual(){
@@ -69,26 +69,26 @@ class GoTaoTests: XCTestCase {
         let kifu = "(;;B[qq])"
         let game = parser.parse(kifu)
         game.currentMove = 0
-        let groups = game.assignGroups()
+        let groups = game.playToHand(0)
         assert(groups.count == 1)
-        assert(groups[0].calculateLiberty(game.occupiedLocations()) == 4)
+        assert(groups[0].calculateLiberty(game.occupiedLocations(game.allMoves)) == 4)
     }
     func testLibertyTwo(){
         let kifu = "(;;B[qq];B[qr])"
         let game = parser.parse(kifu)
         game.currentMove = 1
-        let groups = game.assignGroups()
+        let groups = game.playToHand(1)
         assert(groups.count == 1)
-        assert(groups[0].calculateLiberty(game.occupiedLocations()) == 6)
+        assert(groups[0].calculateLiberty(game.occupiedLocations(game.allMoves)) == 6)
     }
     
     func testLibertyThree(){
         let kifu = "(;;B[qq];B[qr];W[qp];W[rq];W[rr];W[qs];W[pr];W[pq])"
         let game = parser.parse(kifu)
         game.currentMove = 7
-        let groups = game.assignGroups()
-        //assert(groups.count == 2)
-        assert(groups[2].calculateLiberty(game.occupiedLocations()) == 0)
+        let groups = game.playToHand(7)
+
+        assert(groups.count == 4)
     }
     
     

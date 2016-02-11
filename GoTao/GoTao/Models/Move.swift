@@ -12,19 +12,23 @@ class Move: NSObject {
     var type:StoneType
     var isDead:Bool = false
     var groupName = ""
+    var handNumber = 0 //the order of move
+    var handOfDead = -1 // in which step the move is caculated to be dead
     
     
-    init(type:StoneType,loc:Location) {
+    init(type:StoneType,loc:Location,hand:Int) {
         self.location = loc
         self.type = type
+        self.handNumber = hand
     }
-    init(step:String){
+    init(step:String, hand:Int){
         let color =  StoneType(rawValue:step[step.startIndex])
         let x = step.asciiValueAt(pos: 2) - "a".asciiValue
         let y = step.asciiValueAt(pos: 3) - "a".asciiValue
         
         self.type = color!
-        self.location = Location(x: x,y: y)        
+        self.location = Location(x: x,y: y)
+        self.handNumber = hand
     }
     
     func isConnectedTo(another:Move)->Bool{

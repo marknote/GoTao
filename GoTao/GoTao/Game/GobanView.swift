@@ -69,12 +69,8 @@ class GobanView: UIView {
         let imgWhite = UIImage(named: "White.png")
        
         let  count = moves?.count
-        
-        let font = UIFont(name: "Helvetica Bold", size: 14.0)
-    
-         let textColor = UIColor(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)
-
-        
+        let font = UIFont(name: "Helvetica Bold", size: 8.0)
+        let textColor = UIColor(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)
         let textFontAttributes = [
             NSFontAttributeName : font!,
             NSForegroundColorAttributeName: textColor
@@ -83,6 +79,9 @@ class GobanView: UIView {
         for (var i = 0; i < count; i++ )
         {
             let move = moves![i]
+            if move.isDead {
+                continue
+            }
             let imageRect = CGRectMake( (CGFloat(move.location.x)+0.5)*stoneSize,(CGFloat(move.location.y)+0.5)*stoneSize, stoneSize, stoneSize);
             if move.type == .White
             {

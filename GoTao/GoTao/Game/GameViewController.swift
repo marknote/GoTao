@@ -43,8 +43,11 @@ import UIKit
     }
     func showMoves(){
         if _game.allMoves.count > 0 {            
+            //_goban.moves = _game.currentMoves()
+            //_game.assignGroups()
+            _game.moveTocurrent()
             _goban.moves = _game.currentMoves()
-            _game.assignGroups()
+            
             _goban.setNeedsDisplay()
             _lblTitle.text = "\(_game.playerBlack) v \(_game.playerWhite)   \(_game.currentMove + 1) / \(_game.allMoves.count)"
         }
