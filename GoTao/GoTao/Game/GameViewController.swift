@@ -17,11 +17,11 @@ import UIKit
         
         super.viewDidLoad()
         
-        if let filepath = NSBundle.mainBundle().pathForResource("001", ofType: "sgf") {
+        if let filepath = Bundle.main.path(forResource: "001", ofType: "sgf") {
     
             //reading
             do {
-                let kifu = try NSString(contentsOfFile: filepath, encoding: NSUTF8StringEncoding)
+                let kifu = try NSString(contentsOfFile: filepath, encoding: String.Encoding.utf8.rawValue)
                 _game = SGFParser().parse(kifu as String)
                 
                 //_goban.moves = _game.allMoves
@@ -32,12 +32,12 @@ import UIKit
         }
     }
     
-    @IBAction func backClick(sender:UIBarItem){
+    @IBAction func backClick(_ sender:UIBarItem){
         _game.goBack()
         showMoves()
     }
     
-    @IBAction func forwardClick(sender:UIBarItem){
+    @IBAction func forwardClick(_ sender:UIBarItem){
         _game.goForward()
         showMoves()
     }

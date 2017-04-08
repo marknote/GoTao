@@ -18,7 +18,7 @@ class Location: NSObject {
         return self.x * self.x  + self.y * self.y
     }
     
-    override func isEqual(object: AnyObject?) -> Bool {
+    override func isEqual(_ object: Any?) -> Bool {
         if let obj = object as? Location {
             return x == obj.x && y == obj.y
         } else {
@@ -26,7 +26,7 @@ class Location: NSObject {
         }
     }
     
-    func isConnectedTo(another:Location)->Bool{        
+    func isConnectedTo(_ another:Location)->Bool{        
         let deltaX = abs(Int(x) - Int(another.x))
         if deltaX > 1 {
             return false

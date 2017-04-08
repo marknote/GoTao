@@ -13,9 +13,9 @@ class GoTaoTests: XCTestCase {
         let kifu = "(;;B[qd];W[dc];B[pq];)"
         let result = parser.parse(kifu)
         assert(3==result.allMoves.count)
-        assert(result.allMoves[0].type == .Black, "The 1st move is black")
-        assert(result.allMoves[1].type == .White, "The 2nd move is white")
-        assert(result.allMoves[2].type == .Black, "The 3rd move is black")
+        assert(result.allMoves[0].type == .black, "The 1st move is black")
+        assert(result.allMoves[1].type == .white, "The 2nd move is white")
+        assert(result.allMoves[2].type == .black, "The 3rd move is black")
     }
     
     func testKifuMetaInfo() {

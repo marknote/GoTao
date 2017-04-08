@@ -48,7 +48,7 @@ class GameInfo: NSObject {
     }
     
     
-    func playToHand(hand:Int)-> [MoveGroup]{
+    func playToHand(_ hand:Int)-> [MoveGroup]{
         // the very beginning
         if hand == 0 {
             let group0 = MoveGroup()
@@ -114,7 +114,7 @@ class GameInfo: NSObject {
         return moves
     }
     
-    func occupiedLocations(moves: [Move])->[Location]{
+    func occupiedLocations(_ moves: [Move])->[Location]{
         var occupied = [Location]()
         //let array = currentMoves()
         for m in moves{

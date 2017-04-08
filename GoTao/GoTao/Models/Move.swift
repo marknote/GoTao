@@ -31,14 +31,14 @@ class Move: NSObject {
         self.handNumber = hand
     }
     
-    func isConnectedTo(another:Move)->Bool{
+    func isConnectedTo(_ another:Move)->Bool{
         return  (self.type == another.type) && self.location.isConnectedTo(another.location)
         
     }
     
     
     
-    func calculateLiberty(occupied:[Location])->Int{
+    func calculateLiberty(_ occupied:[Location])->Int{
         var liberty = 4
         if (location.x == 0 || location.x == 19 || location.y == 0 || location.y == 19){
             liberty = 3

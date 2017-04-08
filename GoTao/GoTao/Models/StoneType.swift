@@ -7,6 +7,6 @@
 import Foundation
 
 enum StoneType: Character {
-    case Black = "B"
-    case White = "W"
+    case black = "B"
+    case white = "W"
 }

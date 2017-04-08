@@ -6,12 +6,12 @@
 
 import UIKit
 
- public class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+ open class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var _games:[GameInfo] = [GameInfo]()
     @IBOutlet weak var _tblGames:UITableView!
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         let game1 = GameInfo()
@@ -25,15 +25,15 @@ import UIKit
         _games.append(game2)
     }
     
-    @objc public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    @objc open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _games.count
     }
     
-    @objc public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    @objc open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let game = _games[row]
         
-        let cell = _tblGames.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
+        let cell = _tblGames.dequeueReusableCell(withIdentifier: "GameCell", for: indexPath)
         cell.textLabel?.text = game.title
         cell.detailTextLabel?.text = game.metaInfo
         return cell

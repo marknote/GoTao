@@ -6,64 +6,93 @@
 */
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class GobanView: UIView {
     var moves:[Move]?
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         let ctx = UIGraphicsGetCurrentContext()
-        let rec = CGContextGetClipBoundingBox(ctx)
-        let w = rec.size.width;
+        let rec = ctx?.boundingBoxOfClipPath
+        let w = rec?.size.width;
         //back ground image
         let background = UIImage(named:"board_back")
         
-        CGContextDrawImage(ctx, rec, background!.CGImage )
-        let space = w/20.0
-        drawLines(ctx!,space:space,w:w)
+        ctx?.draw(background!.cgImage!, in: rec!)
+        let space = w!/20.0
+        drawLines(ctx!,space:space,w:w!)
         drawDots(ctx!,space:space)
         if (moves != nil  && moves?.count > 0)  {
             drawMoves(ctx!, stoneSize: space)
         }
         
     }
-    func drawLines(ctx:CGContext,space:CGFloat, w:CGFloat){
-        CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 1)
-        CGContextSetLineWidth(ctx, 0.4)
-        CGContextBeginPath(ctx)
+    func drawLines(_ ctx:CGContext,space:CGFloat, w:CGFloat){
+        ctx.setStrokeColor(red: 0, green: 0, blue: 0, alpha: 1)
+        ctx.setLineWidth(0.4)
+        ctx.beginPath()
         
-        for(var i=0;i<=18;i++)
+        for i in 0...18
         {
             
-            CGContextMoveToPoint(ctx, (CGFloat(i+1))*space, space)
-            CGContextAddLineToPoint(ctx, (CGFloat(i+1))*space, w-space)
-            CGContextStrokePath(ctx)
+            ctx.move(to: CGPoint(x: (CGFloat(i+1))*space, y: space))
+            ctx.addLine(to: CGPoint(x: (CGFloat(i+1))*space, y: w-space))
+            ctx.strokePath()
         }
-        for(var i=0;i<=18;i++)
+        for i in 0...18
         {
             
-            CGContextMoveToPoint(ctx, space,(CGFloat(i+1))*space);
-            CGContextAddLineToPoint(ctx,w-space, (CGFloat(i+1))*space);
-            CGContextStrokePath(ctx);
+            ctx.move(to: CGPoint(x: space, y: (CGFloat(i+1))*space));
+            ctx.addLine(to: CGPoint(x: w-space, y: (CGFloat(i+1))*space));
+            ctx.strokePath();
         }
 
     }
-    func drawDots(ctx:CGContext,space:CGFloat){
-        for (var i=0;i<=2;i++)
-        {
-            for(var j=0;j<=2;j++)
-            {
-                CGContextBeginPath(ctx);
+    func drawDots(_ ctx:CGContext,space:CGFloat){
+        for i in 0...2 {
+            for j in 0...2 {
+                ctx.beginPath();
                 
-                CGContextAddArc(ctx, (CGFloat(1+3+6*i))*space ,CGFloat(1+3+6*j)*space, 2, 0, CGFloat(2.0*M_PI), 1);
+                let frame = CGRect(x:CGFloat(1 + 3 + 6*i) * space - 0.5 * space,
+                                   y:CGFloat(1 + 3 + 6*j) * space - 0.5 * space,
+                                   width:space,
+                                   height:space)
                 
-                CGContextStrokePath(ctx);
+                ctx.addEllipse(in:frame)
+                
+                //CGContextAddArc(ctx, (CGFloat(1+3+6*i))*space ,CGFloat(1+3+6*j)*space, 2, 0, CGFloat(2.0*M_PI), 1);
+                
+                ctx.strokePath();
             }
         }
 
     }
     
-    func drawMoves(ctx:CGContext,stoneSize:CGFloat ){
+    func drawMoves(_ ctx:CGContext,stoneSize:CGFloat ){
         // chess
         let imgBlack = UIImage(named: "Black.png")
         let imgWhite = UIImage(named: "White.png")
@@ -76,41 +105,44 @@ class GobanView: UIView {
             NSForegroundColorAttributeName: textColor
         ]
 
-        for (var i = 0; i < count; i++ )
-        {
+        for i in 0..<count! {
             let move = moves![i]
             if move.isDead {
                 continue
             }
-            let imageRect = CGRectMake( (CGFloat(move.location.x)+0.5)*stoneSize,(CGFloat(move.location.y)+0.5)*stoneSize, stoneSize, stoneSize);
-            if move.type == .White
+            let imageRect = CGRect( x: (CGFloat(move.location.x)+0.5)*stoneSize,y: (CGFloat(move.location.y)+0.5)*stoneSize, width: stoneSize, height: stoneSize);
+            if move.type == .white
             {
-                CGContextDrawImage(ctx, imageRect, imgWhite?.CGImage)
+                ctx.draw((imgWhite?.cgImage)!, in: imageRect)
             }else
             {
-                CGContextDrawImage(ctx, imageRect, imgBlack?.CGImage )
+                ctx.draw((imgBlack?.cgImage)!, in: imageRect)
                 
             }
             if move.groupName.characters.count > 0 {
                 //CGContextSetTextMatrix(ctx, CGAffineTransformMakeScale(1.0, -1.0))
-                CGContextSetRGBStrokeColor(ctx, 1, 0, 0, 1)
-                let p = CGPointMake((CGFloat(move.location.x)+0.5)*stoneSize,(CGFloat(move.location.y)+0.5)*stoneSize);
-                (move.groupName as NSString).drawAtPoint(p, withAttributes:textFontAttributes)
+                ctx.setStrokeColor(red: 1, green: 0, blue: 0, alpha: 1)
+                let p = CGPoint(x: (CGFloat(move.location.x)+0.5)*stoneSize,y: (CGFloat(move.location.y)+0.5)*stoneSize);
+                (move.groupName as NSString).draw(at: p, withAttributes:textFontAttributes)
             }
         }
         
         if count > 0
         {
             let move = moves![count! - 1]
-            CGContextSetLineWidth(ctx, 1.8)
+            ctx.setLineWidth(1.8)
             
-            CGContextSetRGBStrokeColor(ctx, 0, 1, 0, 1)
+            ctx.setStrokeColor(red: 0, green: 1, blue: 0, alpha: 1)
             
-            CGContextBeginPath(ctx)
-            CGContextAddArc(ctx,
-                CGFloat(move.location.x+1) * stoneSize,
-                CGFloat(move.location.y+1) * stoneSize, 3, 0, CGFloat(2.0*M_PI), 0)
-            CGContextStrokePath(ctx)
+            ctx.beginPath()
+            let frame = CGRect(x:CGFloat(move.location.x) * stoneSize + 0.5 * stoneSize,
+                               y:CGFloat(move.location.y) * stoneSize + 0.5 * stoneSize,
+                               width:stoneSize,
+                               height:stoneSize)
+            
+            ctx.addEllipse(in:frame)
+            
+            ctx.strokePath()
         }
     }
 

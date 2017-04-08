@@ -6,9 +6,9 @@
 
 import Foundation
 
-public class SGFParser {
+open class SGFParser {
     
-    func parse(kifu:String)->GameInfo{
+    func parse(_ kifu:String)->GameInfo{
         let game = GameInfo()
         let nodes = kifu.characters.split { $0 == ";" }
             .map(String.init)
@@ -37,7 +37,7 @@ public class SGFParser {
         }
         
         let moveSteps = nodes
-            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.characters.count >= 4 && $0[$0.startIndex.advancedBy(4)] == "]"}
+            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.characters.count >= 4 && $0[$0.characters.index($0.startIndex, offsetBy: 4)] == "]"}
         game.allMoves = [Move]()
         if moveSteps.count > 0 {
             for i in 0...moveSteps.count - 1 {
