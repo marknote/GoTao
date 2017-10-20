@@ -44,7 +44,7 @@ class GameInfo: NSObject {
         }
         
         
-        playToHand(currentMove)
+        _ = playToHand(currentMove)
     }
     
     

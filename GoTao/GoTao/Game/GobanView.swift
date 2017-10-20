@@ -97,10 +97,10 @@ class GobanView: UIView {
        
         let  count = moves?.count
         let font = UIFont(name: "Helvetica Bold", size: 8.0)
-        let textColor = UIColor(colorLiteralRed: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        let textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)  
         let textFontAttributes = [
-            NSFontAttributeName : font!,
-            NSForegroundColorAttributeName: textColor
+            NSAttributedStringKey.font : font!,
+            NSAttributedStringKey.foregroundColor: textColor
         ]
 
         for i in 0..<count! {

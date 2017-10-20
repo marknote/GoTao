@@ -19,10 +19,9 @@ extension String {
     func findValueWithTags(_ beginTag:String,endTag:String)->String?{
         if let beginLocation = self.range(of: beginTag) {
             let startIndex = beginLocation.upperBound
-            let rest = self.substring(from:startIndex)
-            //let rest = self.substring(from: <#T##String.CharacterView corresponding to `startIndex`##String.CharacterView#>.index(startIndex, offsetBy: beginTag.characters.count))
+            let rest = String(self[startIndex...])
             if let endRang = rest.range(of: endTag){
-                return rest.substring(to: endRang.lowerBound)
+                return String(rest[..<endRang.lowerBound]) 
             }
         }
         return nil
