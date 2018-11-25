@@ -1,7 +1,7 @@
 /**
  *
  * Copyright (c) 2015, MarkNote. (MIT Licensed)
- * https://github.com/marknote/MarknoteParser
+ * https://github.com/marknote/GoTao
  */
 
 import Foundation
@@ -10,7 +10,7 @@ open class SGFParser {
     
     func parse(_ kifu:String)->GameInfo{
         let game = GameInfo()
-        let nodes = kifu.characters.split { $0 == ";" }
+        let nodes = kifu.split(separator: ";")
             .map(String.init)
         
         if nodes.count >= 2 {
@@ -37,7 +37,7 @@ open class SGFParser {
         }
         
         let moveSteps = nodes
-            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.characters.count >= 4 && $0[$0.characters.index($0.startIndex, offsetBy: 4)] == "]"}
+            .filter{($0.hasPrefix("B[")||$0.hasPrefix("W["))&&$0.count >= 4 && $0[4] == "]"}
         game.allMoves = [Move]()
         if moveSteps.count > 0 {
             for i in 0...moveSteps.count - 1 {
@@ -45,9 +45,6 @@ open class SGFParser {
                 game.allMoves.append(move)
             }
         }
-        
-        
         return game
     }
-    
 }

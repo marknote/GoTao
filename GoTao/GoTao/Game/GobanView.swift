@@ -2,7 +2,7 @@
 /**
 *
 * Copyright (c) 2015, MarkNote. (MIT Licensed)
-* https://github.com/marknote/MarknoteParser
+* https://github.com/marknote/GoTao
 */
 
 import UIKit
@@ -99,8 +99,8 @@ class GobanView: UIView {
         let font = UIFont(name: "Helvetica Bold", size: 8.0)
         let textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.8)  
         let textFontAttributes = [
-            NSAttributedStringKey.font : font!,
-            NSAttributedStringKey.foregroundColor: textColor
+            NSAttributedString.Key.font : font!,
+            NSAttributedString.Key.foregroundColor: textColor
         ]
 
         for i in 0..<count! {
@@ -118,7 +118,7 @@ class GobanView: UIView {
                 ctx.draw((imgBlack?.cgImage)!, in: imageRect)
                 
             }
-            if move.groupName.characters.count > 0 {
+            if move.groupName.count > 0 {
                 ctx.setStrokeColor(red: 1, green: 0, blue: 0, alpha: 1)
                 let p = CGPoint(x: (CGFloat(move.location.x) + 0.5)*stoneSize,
                                 y: (CGFloat(move.location.y) + 0.5)*stoneSize);
